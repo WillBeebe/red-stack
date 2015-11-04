@@ -6,11 +6,11 @@ RUN cd /rails && bundle
 
 WORKDIR /api
 # Cache Gemfile changes
-#ADD Gemfile /api/Gemfile
-#RUN bundle install
+ADD Gemfile /api/Gemfile
+RUN bundle install
 
 ADD . /api
 
 EXPOSE 3000
 
-CMD ["bundle", "exec", "bin/rails", "s"]
+CMD ["bundle", "exec", "bin/rails", "s", "-b", "0.0.0.0"]
