@@ -16,3 +16,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+
+# explicity don't include, the bundle install step in the
+# container will make this
+Gemfile.lock
